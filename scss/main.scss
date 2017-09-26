@@ -1,0 +1,55 @@
+// @import "./imports/_normalize.scss";
+//
+// *{ box-sizing: border-box }
+
+$TEXT-COLOR: #888;
+$BACK-COLOR: #f4f4f4;
+$BACK-BOX: white;
+$BORDER-COLOR: rgba(0,0,0,0.07);
+@mixin rounded {
+  border-radius: 30px;
+}
+
+body {
+  background-color: $BACK-COLOR;
+  .grid {
+    display: flex;
+    margin: 0 auto;
+    width: 440px;
+    padding: 20px;
+    text-align: center;
+    flex-direction: column;
+    .col1 {
+      padding: 20px;
+      background-color: $BACK-BOX;
+      border: 2px solid $BORDER-COLOR;
+      border-bottom-style: none;
+    }
+    .col2 {
+      text-align: right;
+      padding: 0 20px 20px 20px;
+      background-color: $BACK-BOX;
+      color:  $TEXT-COLOR;
+      font-size: 24px;
+      border: 2px solid $BORDER-COLOR;
+      border-top-style: none;
+    }
+    .col3 {
+      display: flex;
+      margin-top: 20px;
+      img {
+        @include rounded();
+        width: 50px;
+        margin-right: 15px;
+        margin-left: 20px;
+      }
+      p {
+        color: #42427b;
+        font-size: 19px;
+        margin-top: 22px;
+        line-height: 0;
+        font-weight: bold;
+      }
+    }
+  }
+}
